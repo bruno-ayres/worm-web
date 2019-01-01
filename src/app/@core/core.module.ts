@@ -8,6 +8,7 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
 import { DataModule } from './data/data.module';
 import { AnalyticsService } from './utils/analytics.service';
 import { RoleProvider } from '../auth/role-provider';
+import { AgGridModule } from 'ag-grid-angular';
 
 const socialLinks = [
   {
@@ -88,10 +89,10 @@ export const NB_CORE_PROVIDERS = [
 
 @NgModule({
   imports: [
-    CommonModule,
+    CommonModule
   ],
   exports: [
-    NbAuthModule,
+    NbAuthModule
   ],
   declarations: [],
 })

@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { ThemeModule } from '../../@theme/theme.module';
 import { DashboardComponent } from './dashboard.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   imports: [
-    ThemeModule,
+    ThemeModule, AgGridModule.withComponents([])
   ],
   declarations: [
     DashboardComponent,

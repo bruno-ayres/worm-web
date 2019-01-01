@@ -12,6 +12,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
+    title: 'Entities',
+    icon: 'nb-gear',
+    children: [
+      {
+        title: 'Customer',
+        link: '/pages/entities/customer/main',
+      }
+    ],
+  },
+  {
     title: 'Auth',
     icon: 'nb-locked',
     children: [
