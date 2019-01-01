@@ -83,7 +83,7 @@ export class CustomerComponent implements OnInit, OnDestroy {
   }
 
   transition() {
-      this.router.navigate(['/pages/entities/customer'], {
+      this.router.navigate(['/pages/customer'], {
           queryParams: {
               page: this.page,
               size: this.itemsPerPage,
@@ -96,7 +96,7 @@ export class CustomerComponent implements OnInit, OnDestroy {
   clear() {
       this.page = 0;
       this.router.navigate([
-          '/pages/entities/customer',
+          '/pages/customer',
           {
               page: this.page,
               sort: this.predicate + ',' + (this.reverse ? 'asc' : 'desc')

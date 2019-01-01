@@ -17,7 +17,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Customer',
-        link: '/pages/entities/customer/main',
+        link: '/pages/customer',
       },
     ],
   },

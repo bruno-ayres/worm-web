@@ -13,8 +13,8 @@ const routes: Routes = [{
       component: DashboardComponent,
     },
     {
-      path: 'entities',
-      loadChildren: './entities/entities.module#EntitiesModule',
+      path: 'customer',
+      loadChildren: './entities/customer/customer.module#CustomerModule',
     },
     {
       path: '',

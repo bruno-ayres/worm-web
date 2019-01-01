@@ -1,7 +1,7 @@
 <div>
     <h2 id="page-heading">
         <span >Customers</span>
-        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-customer" [routerLink]="['/pages/entities/customer/new']">
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-customer" [routerLink]="['/pages/customer/new']">
             <fa-icon [icon]="'plus'"></fa-icon>
             <span>
             Create new Customer
@@ -26,7 +26,7 @@
                         <button
                             type="submit"
                             class="btn btn-primary btn-icon btn-xs"
-                            routerLink="/pages/entities/customer/{{customer.id}}/edit"
+                            routerLink="/pages/customer/{{customer.id}}/edit"
                         >
                             <fa-icon [icon]="'pencil-alt'"></fa-icon>
                         </button>

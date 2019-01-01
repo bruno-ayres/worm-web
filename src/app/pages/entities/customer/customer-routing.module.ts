@@ -2,7 +2,6 @@ import { NgModule, Injectable } from '@angular/core';
 import { Routes, RouterModule, Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { CustomerComponent } from './customer.component';
 import { JhiResolvePagingParams } from 'ng-jhipster';
-import { CustomerOutletComponent } from './customer-outlet.component';
 import { CustomerUpdateComponent } from './customer-update.component';
 import { ICustomer, Customer } from './customer.model';
 import { CustomerService } from './customer.service';
@@ -27,12 +26,9 @@ export class CustomerResolve implements Resolve<ICustomer> {
 }
 
 
-const routes: Routes = [{
-  path: '',
-  component: CustomerOutletComponent,
-  children: [
+const routes: Routes = [
     {
-        path: 'main',
+        path: '',
         component: CustomerComponent,
         resolve: {
             pagingParams: JhiResolvePagingParams
@@ -64,14 +60,8 @@ const routes: Routes = [{
             authorities: ['ROLE_USER'],
             pageTitle: 'wormApp.customer.home.title'
         }
-    },
-    {
-      path: '',
-      redirectTo: 'main',
-      pathMatch: 'full',
-    },
-  ],
-}];
+    }
+];
 
 
 @NgModule({
