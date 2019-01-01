@@ -32,7 +32,7 @@ import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
       alertAsToast: false,
       alertTimeout: 5000,
       i18nEnabled: true,
-      defaultI18nLang: 'pt-br'
+      defaultI18nLang: 'pt-br',
     }),
 
     NgbModule.forRoot(),
@@ -45,7 +45,7 @@ import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
-      multi: true
+      multi: true,
     },
   ],
 })

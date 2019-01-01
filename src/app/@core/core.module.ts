@@ -1,14 +1,12 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NbAuthModule, NbDummyAuthStrategy, NbPasswordAuthStrategy, NbAuthJWTToken } from '@nebular/auth';
+import { NbAuthModule, NbPasswordAuthStrategy, NbAuthJWTToken } from '@nebular/auth';
 import { NbSecurityModule, NbRoleProvider } from '@nebular/security';
-import { of as observableOf } from 'rxjs';
 
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import { DataModule } from './data/data.module';
 import { AnalyticsService } from './utils/analytics.service';
 import { RoleProvider } from '../auth/role-provider';
-import { AgGridModule } from 'ag-grid-angular';
 
 const socialLinks = [
   {
@@ -54,7 +52,7 @@ export const NB_CORE_PROVIDERS = [
         },
         resetPass: {
           endpoint: '/auth/reset-pass',
-        }
+        },
       }),
     ],
     forms: {
