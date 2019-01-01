@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ICustomer } from './customer.model';
 import { SERVER_API_URL } from '../../../@core/utils/app.constants';
 import { createRequestOption } from '../../../@core/utils/request-util';
-import { NbAuthJWTToken, NbTokenService, NbAuthToken } from '@nebular/auth';
 
 type EntityResponseType = HttpResponse<ICustomer>;
 type EntityArrayResponseType = HttpResponse<ICustomer[]>;
